@@ -2,7 +2,7 @@
 
 namespace PJIntergrador.Controllers
 {
-    public class LoginController : Controller
+    public class HomeController : Controller
     {
         public IActionResult Index()
         {
