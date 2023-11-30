@@ -1,11 +1,11 @@
-﻿using PJIntergrador.Models;
+﻿using PJIntergrador.Data.Repositorio.Interfaces;
+using PJIntergrador.Models;
 using static PJIntergrador.Data.Repositorio.SociosRepositorio;
 
 namespace PJIntergrador.Data.Repositorio
 {
-    public class SociosRepositorio
-    {
-        public class AlunoRepositorio : ISociosRepositorio
+
+        public class SociosRepositorio : ISociosRepositorio
         {
 
 
@@ -85,5 +85,5 @@ namespace PJIntergrador.Data.Repositorio
 
 
         }
-    }
+    
 }

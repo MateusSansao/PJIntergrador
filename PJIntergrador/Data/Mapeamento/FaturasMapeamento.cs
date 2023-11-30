@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using PJIntergrador.Models;
 
-namespace ProjetoIntegrador.Data.Mapeamento
+namespace PJIntergrador.Data.Mapeamento
 {
     public class FaturasMapeamento : IEntityTypeConfiguration<Faturas>
     {

@@ -1,10 +1,10 @@
-﻿using PJIntergrador.Models;
+﻿using PJIntergrador.Data.Repositorio.Interfaces;
+using PJIntergrador.Models;
 using static PJIntergrador.Data.Repositorio.UsuariosRepositorio;
 
 namespace PJIntergrador.Data.Repositorio
 {
-    public class UsuariosRepositorio
-    {
+
         public class UsuariosRepositorio : IUsuariosRepositorio
         {
 
@@ -24,5 +24,4 @@ namespace PJIntergrador.Data.Repositorio
                 return _bancoContexto.Usuarios.FirstOrDefault(x => x.NomeUsuario == usuarios.NomeUsuario && x.Senha == usuarios.Senha);
             }
         }
-    }
 }
