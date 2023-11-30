@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using PJIntergrador.Models;
 
-namespace ProjetoIntegrador.Data.Mapeamento
+namespace PJIntergrador.Data.Mapeamento
 {
     public class SociosMapeamento : IEntityTypeConfiguration<Socios>
     {
