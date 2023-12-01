@@ -1,147 +1,174 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿
 @{
+    Layout = "_LayoutDeslogado";
 }
-<style>
- 
-*{
-     padding:0;
-     margin:0;
-     box-sizing:border-box;
- }
- .container{
-     display:flex;
-     justify-content:space-around;
- }
- .parent-link{
-     font-size:1rem;
- }
- .parent-link,.icon{
-     display:flex;
-     align-items:center;
-     justify-content:center
- }
- .logo:hover{
-     opacity: 0.7;
- }
- .social{
-     display:flex;
-     justify-content:center;
-     align-items:center;
- }
- .social-links,.msg{
-     text-decoration:none;
- }
- .social-links{
-     padding:0 2.5rem;
-     margin:0;
-     color: white;
-     font-weight:500
- }
- .social-links:hover{
-     opacity:0.8;
- }
- .sm-icon{
-     padding:0 1rem;
-     margin:0;
-     color:white;
- }
- .sm-icon:hover{
-     opacity:0.8;
- }
- nav{
-     font-size:20px;
-     font-weight:700;
-     display:flex;
-     justify-content:space-between;
-     padding-top:32px;
- }
- body{
-     font-family:'Nunito',sans-serif;
-     background-image:linear-gradient(45deg,#21D4FD 0%,#B721FF 100%);
-     height:100vh;
-     background-size:cover;
-     background-position:center;
-     background-repeat:no-repeat;
- }
- .form{
-     display:flex;
-     justify-content:center;
-     padding-top:3rem;
- }
- .sub-form{
-     display:flex;
-     flex-direction:column;
-     align-items:center;
-     width:30vw;
-     height:70vh;
-     border-radius:12px;
-     box-shadow:rgba(50,50,93,0,25)0px 13px 27px -5px,
-         rgba(0,0,0,0.3) 0px 8px 16px -8px;
-     background-color: white;
- }
- h2{
-     margin:1.5rem 0rem 0;
-     text-align:center;
- }
- label{
-     padding-left:16px;
-     opacity:0.75;
- }
- input{
-     display:flex;
-     border-radius:50px;
-     border-style:none;
-     outline:none;
-     margin-top:8px;
-     padding:12px 24px;
-     width:250px;
-     background-color:#EAEEED;
-
- }
- input:focus{
-opacity:0.7;
- }
-button {
-    padding: 12px 48px;
-    border-radius: 50px;
-    color: white;
-    margin-top: 1rem;
-    cursor: pointer;
-    outline: none;
-    border-width: 0;
-    background-color: #1A1B27;
-    font-weight:600;
-    width:100%;
-}
-button:hover{
-    opacity:0.8;
-}
-.bottom-form{
-    display:flex;
-    justify-content:center;
-    margin-top:3rem;
-}
-.signup{
-    padding-left:5px;
-    text-decoration:none;
-    cursor:pointer;
-    color:#21D4FD;
-}
-.signup:hover{
-    opacity:0.8;
-}
-
-</style>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="~/css/site.css">
+    <title>SEIE.Entre ou Cadastre-se</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .parent-link {
+            font-size: 1rem;
+        }
+
+        .parent-link, .icon {
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+
+        .logo:hover {
+            opacity: 0.7;
+        }
+
+        .social {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .social-links, .msg {
+            text-decoration: none;
+        }
+
+        .social-links {
+            padding: 0 2.5rem;
+            margin: 0;
+            color: white;
+            font-weight: 500
+        }
+
+            .social-links:hover {
+                opacity: 0.8;
+            }
+
+        .sm-icon {
+            padding: 0 1rem;
+            margin: 0;
+            color: white;
+        }
+
+            .sm-icon:hover {
+                opacity: 0.8;
+            }
+
+        nav {
+            font-size: 20px;
+            font-weight: 700;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 32px;
+        }
+
+        body {
+            font-family: 'Nunito',sans-serif;
+            background-image: linear-gradient(45deg,#ba181b 0%,#b1a7a6 100%);
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .form {
+            display: flex;
+            justify-content: center;
+            padding-top: 3rem;
+        }
+
+        .sub-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 30vw;
+            height: 70vh;
+            border-radius: 12px;
+            box-shadow: rgba(50,50,93,0,25)0px 13px 27px -5px, rgba(0,0,0,0.3) 0px 8px 16px -8px;
+            background-color: white;
+        }
+
+        h2 {
+            margin: 1.5rem 0rem 0;
+            text-align: center;
+            border-bottom:30px;
+        }
+
+        label {
+            padding-left: 16px;
+            opacity: 0.75;
+        }
+
+        input {
+            display: flex;
+            border-radius: 50px;
+            border-style: none;
+            outline: none;
+            margin-top: 8px;
+            padding: 12px 24px;
+            width: 250px;
+            background-color: #EAEEED;
+        }
+
+            input:focus {
+                opacity: 0.7;
+            }
+
+        button {
+            padding: 12px 48px;
+            border-radius: 50px;
+            color: white;
+            margin-top: 1rem;
+            cursor: pointer;
+            outline: none;
+            border-width: 0;
+            background-color: #1A1B27;
+            font-weight: 600;
+            width: 100%;
+        }
+
+            button:hover {
+                opacity: 0.8;
+                width:25px;
+                color: #0b090a;
+                background-color: #e3b23c;
+            }
+
+        .bottom-form {
+            display: flex;
+            justify-content: center;
+            margin-top: 3rem;
+        }
+
+        .signup {
+            padding-left: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            color: #ffffff;
+        }
+
+            .signup:hover {
+                opacity: 0.8;
+            }
+           img{
+               height:100px;
+               width:100px;
+           }
+
+    </style>
 </head>
 
 <body>
@@ -149,7 +176,7 @@ button:hover{
         <nav class="container">
             <div class="logo-box">
                 <a href="" target="_blank"></a>
-                <img src="donkeey.png" alt="The code donkey photo" class="logo" />
+                <img src="https://i.pinimg.com/236x/e8/7a/b1/e87ab1809f08fd446f0a163d144faae4.jpg" alt="The code donkey photo" class="logo" />
             </div>
             <div class="parent-link">
                 <a href="#" class="social-links">Sobre Nós</a>
@@ -158,7 +185,7 @@ button:hover{
                 <a href="#" class="social-links">Contato</a>
             </div>
             <div class="icon">
-                <a href="" target="_blank" class="sm-icon">
+                <a href="https://www.instagram.com/acaprabrusquesc/" target="_blank" class="sm-icon">
                     <ion-icon name="logo-instagram"></ion-icon>
                 </a>
                 <a href="" target="_blank" class="sm-icon">
@@ -177,20 +204,20 @@ button:hover{
         </nav>
     </header>
     <div class="form">
-        <form action="#" class="subform">
+        <form asp-controller="Home" asp-action="Index" class="subform">
             <div class="up-form">
-                <h2>Entrar</h2>
-                <label>Username</label><br />
+                <h2>Entre ou Junte-se a Nós!</h2>
+                <label>Usuario</label><br />
                 <input type="text" name="username" /><br />
-                <label>Password</label><br />
+                <label>Senha</label><br />
                 <input type="text" name="password" /><br />
                 <div class="btn">
-                    <button type="submit">Login</button><br />
+                    <button type="submit">Entrar</button><br />
                 </div>
             </div>
             <div class="bottom-form">
-                <div class="no-account">Ainda não possui uma conta?</div>
-                <a href="#" class="signup">Signup</a>
+                <div class="no-account">Esqueci minha senha!</div>
+               <a href="#" class="signup">Recuperar</a>
             </div>
         </form>
     </div>
