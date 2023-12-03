@@ -19,7 +19,6 @@ namespace PJIntergrador.Data
 
         public DbSet<Socios> Socios { get; set; }
         public DbSet<Dependentes> Dependentes { get; set; }
-        public DbSet<Usuarios> Usuarios { get; set; }
         public DbSet<Faturas> Faturas { get; set; }
         public DbSet<Eventos> Eventos { get; set; }
         public DbSet<Exames> Exames { get; set; }

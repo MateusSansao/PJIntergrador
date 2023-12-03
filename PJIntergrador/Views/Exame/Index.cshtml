@@ -2,21 +2,26 @@
     Layout = "_Layout";
     ViewData["Title"] = "Home Page";
 }
-
 <!DOCTYPE html>
-
+@model List<Socios>
 <html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <style>
-        h1{
-            text-align:center;
+        body {
         }
-        img{
-            width: 250px;
-            height: 250px;
+
+        h1 {
+            text-align: center;
+        }
+
+        img {
+            width: 350px;
+            height: 350px;
+            position: relative;
+            left: 800px;
         }
 
         table, th, td {
@@ -32,15 +37,23 @@
     <table>
         <thead>
             <tr>
-                <th scope="col">ExamesFeitos</th>
-                <th scope="col">Data</th>
+                <th scope="col">NomeCompleto</th>
+                <th scope="col">Cpf</th>
+
             </tr>
         </thead>
         <tbody>
+            @if (Model != null && Model.Any())
+            {
+                foreach (Socios socios in Model)
+                {
                     <tr>
-                        <td> Exame de Prostota</td>
-                        <td> 22/01</td>
+                        <td> @socios.NomeCompleto</td>
+                        <td> @socios.Cpf</td>
                     </tr>
+
+                }
+            }
         </tbody>
     </table>
     <img src="https://img.freepik.com/vetores-gratis/ilustracao-desenhada-a-mao-dos-desenhos-animados-do-medico_23-2150696179.jpg" />
