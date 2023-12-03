@@ -13,6 +13,13 @@ namespace PJIntergrador.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new SociosMapeamento());
+            modelBuilder.ApplyConfiguration(new DependentesMapeamento());
+            modelBuilder.ApplyConfiguration(new EventosMapeamento());
+            modelBuilder.ApplyConfiguration(new FaturasMapeamento());
+            modelBuilder.ApplyConfiguration(new ExamesMapeamento());
+            modelBuilder.ApplyConfiguration(new ParticipacaoMapeamento());
+
+
         }
 
 

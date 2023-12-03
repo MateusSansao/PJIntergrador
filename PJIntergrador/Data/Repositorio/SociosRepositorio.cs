@@ -57,14 +57,12 @@ namespace PJIntergrador.Data.Repositorio
                 if (sociosDB == null) throw new System.Exception("Erro");
 
                 sociosDB.NomeCompleto = socios.NomeCompleto;
-                sociosDB.Cpf = socios.Cpf;
                 sociosDB.DataNascimento = socios.DataNascimento;
                 sociosDB.Endereco = socios.Endereco;
                 sociosDB.Telefone = socios.Telefone;
                 sociosDB.Email = socios.Email;
                 sociosDB.DataAdesao = socios.DataAdesao;
                 sociosDB.FlagTitular = socios.FlagTitular;
-                sociosDB.IDUsuario = socios.IDUsuario;
 
                 _bancoContexto.Socios.Update(sociosDB);
                 _bancoContexto.SaveChanges();

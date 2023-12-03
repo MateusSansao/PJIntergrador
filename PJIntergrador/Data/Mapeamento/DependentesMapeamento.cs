@@ -17,11 +17,12 @@ namespace PJIntergrador.Data.Mapeamento
 
 
 
-            builder.Property(t => t.NomeCompleto).HasColumnType("varchar(100)");
-            builder.Property(t => t.DataNascimento).HasColumnType("date");
-            builder.Property(t => t.Parentesco).HasColumnType("varchar(50)");
             builder.Property(t => t.IDSocio).HasColumnType("int");
-            builder.Property(t => t.IDUsuario).HasColumnType("int");
+            builder.Property(t => t.NomeCompleto).HasColumnType("varchar(50)");
+            builder.Property(t => t.Parentesco).HasColumnType("varchar(20)");
+            builder.Property(t => t.UsuarioDependente).HasColumnType("varchar(100)");
+            builder.Property(t => t.SenhaDependente).HasColumnType("varchar(100)");
+         
 
 
 
