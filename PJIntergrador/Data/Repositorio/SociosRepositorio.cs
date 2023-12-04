@@ -7,6 +7,7 @@ namespace PJIntergrador.Data.Repositorio
 
         public class SociosRepositorio : ISociosRepositorio
         {
+           
 
 
 
@@ -14,14 +15,17 @@ namespace PJIntergrador.Data.Repositorio
 
 
 
-            public SociosRepositorio(BancoContexto bancoContexto)
-            {
+        public SociosRepositorio(BancoContexto bancoContexto)
+        {
                 _bancoContexto = bancoContexto;
-            }
+        }
 
+        public Socios ValidarInformacao(Socios socios)
+        {
+            return _bancoContexto.Socios.FirstOrDefault(x => x.Usuario == socios.Usuario && x.Senha == socios.Senha);
+        }
 
-
-            public List<Socios> BuscarSocios()
+        public List<Socios> BuscarSocios()
             {
                 return _bancoContexto.Socios.ToList();
             }

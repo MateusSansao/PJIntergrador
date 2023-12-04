@@ -1,6 +1,12 @@
-﻿
-@{
+﻿@{
     Layout = "_LayoutDeslogado";
+}
+@model Socios
+@if (ViewData["MsgErro"] != null)
+{
+    <div class="alert-danger">
+        @ViewData["MsgErro"]
+    </div>
 }
 
 <!DOCTYPE html>
@@ -179,45 +185,28 @@
                 <img src="https://i.pinimg.com/236x/e8/7a/b1/e87ab1809f08fd446f0a163d144faae4.jpg" alt="The code donkey photo" class="logo" />
             </div>
             <div class="parent-link">
-                <a href="#" class="social-links">Sobre Nós</a>
+                <a href="Views/Cadastrar/Index" class="social-links">Quero Ser Invicta!</a>
                 <a href="#" class="social-links">Projetos</a>
                 <a href="#" class="social-links">Experiência</a>
                 <a href="#" class="social-links">Contato</a>
             </div>
-            <div class="icon">
-                <a href="https://www.instagram.com/acaprabrusquesc/" target="_blank" class="sm-icon">
-                    <ion-icon name="logo-instagram"></ion-icon>
-                </a>
-                <a href="" target="_blank" class="sm-icon">
-                    <ion-icon name="logo-twitter"></ion-icon>
-                </a>
-                <a href="" target="_blank" class="sm-icon">
-                    <ion-icon name="logo-github"></ion-icon>
-                </a>
-                <a href="" target="_blank" class="sm-icon">
-                    <ion-icon name="logo-tiktok"></ion-icon>
-                </a>
-                <a href="" target="_blank" class="sm-icon">
-                    <ion-icon name="logo-youtube"></ion-icon>
-                </a>
-            </div>
         </nav>
     </header>
     <div class="form">
-        <form asp-controller="Home" asp-action="Index" class="subform">
+        <form asp-controller="Login" asp-action="BuscarLogin">
             <div class="up-form">
                 <h2>Entre ou Junte-se a Nós!</h2>
                 <label>Usuario</label><br />
-                <input type="text" name="username" /><br />
+                <input type="email" required asp-for="Usuario"/><br />
                 <label>Senha</label><br />
-                <input type="text" name="password" /><br />
+                <input type="password" required asp-for="Senha"/><br />
                 <div class="btn">
                     <button type="submit">Entrar</button><br />
                 </div>
-            </div>
-            <div class="bottom-form">
-                <div class="no-account">Esqueci minha senha!</div>
-               <a href="#" class="signup">Recuperar</a>
+                <div class="bottom-form">
+                    <div class="no-account">Esqueci minha senha!</div>
+                    <a href="#" class="signup">Recuperar</a>
+                </div>
             </div>
         </form>
     </div>
