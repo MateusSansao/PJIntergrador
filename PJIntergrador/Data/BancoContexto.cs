@@ -18,8 +18,6 @@ namespace PJIntergrador.Data
             modelBuilder.ApplyConfiguration(new FaturasMapeamento());
             modelBuilder.ApplyConfiguration(new ExamesMapeamento());
             modelBuilder.ApplyConfiguration(new ParticipacaoMapeamento());
-
-
         }
 
 
