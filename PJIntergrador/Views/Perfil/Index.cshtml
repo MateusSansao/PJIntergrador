@@ -1,0 +1,62 @@
+﻿@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Home Page";
+}
+<!DOCTYPE html>
+@model List<Socios>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        img {
+            width: 350px;
+            height: 250px;
+            position: relative;
+            left: 800px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+<body>
+    <div>
+        <h1>Exames</h1>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">NomeCompleto</th>
+                <th scope="col">Email</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                foreach (Socios socios in Model)
+                {
+                    <tr>
+                        <td> @socios.NomeCompleto</td>
+                        <td> @socios.Email</td>
+                    </tr>
+
+                }
+            }
+        </tbody>
+    </table>
+    <img src="https://a.storyblok.com/f/191576/1200x800/215e59568f/round_profil_picture_after_.webp" />
+
+</body>
+</html>
