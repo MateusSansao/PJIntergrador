@@ -36,6 +36,9 @@
             background-color:silver;
 
         }
+        body{
+            text-align: center;
+        }
 
     </style>
 </head>
@@ -78,10 +81,22 @@
                         <label><b>Participar</b></label>
                         <input type="checkbox" />
                     </td>
-                </tr>
-                <!-- Adicione mais linhas conforme necessário -->
+                </tr>        
             </tbody>
         </table>
+        <div>
+            <button id="Botao">Confirmar</button>
+        </div>
+        <script>
+            function Alerta() {     
+                alert('Escolha feita com sucesso!');
+            }
+
+            document.addEventListener('DOMContentLoaded', function () {
+                var meuBotao = document.getElementById('Botao');
+                meuBotao.addEventListener('click', Alerta);
+            });
+        </script>
   </from>
 </body>
 </html>
