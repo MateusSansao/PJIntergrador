@@ -1,38 +1,116 @@
-﻿<!DOCTYPE html>
+﻿@model Socios
+@{
+    Layout = "_LayoutDeslogado";
+}
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Página</title>
+    <title>Cadastre-Se seu Beta</title>
     <!-- Adicione seus estilos ou links para folhas de estilo aqui -->
 </head>
 
 <body>
+    <style>
+        body {
+            align-items:center;
+            text-align:center;
+            overflow-x: hidden;
+            font-family: 'Nunito',sans-serif;
+            background-image: linear-gradient(45deg,#ba181b 0%,#b1a7a6 100%);
+            height: 100%;
+            width:100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        label{
+            display:flex;
+            position:relative;
+            left:555px;
+            margin-bottom:20px;
 
-    <header>
-        <h1>Meu Site</h1>
-        <!-- Aqui você pode adicionar seu menu de navegação, logotipo, etc. -->
-    </header>
+        }
 
-    <main>
-        <section>
-            <h2>Seção 1</h2>
-            <p>Conteúdo da seção 1.</p>
-        </section>
+        input
+        {
+            width: 15%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .cadastro{
+            display:block;
+            margin-top:35px;
+        }
+        button{
+            margin-top:50px;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        button:hover{
+            opacity:0,8;
+            background:grey;
+        }
+    </style>
+    <form>
+        <h2></h2></
+        <div class="cadastro">
+            <label for="nome">Nome Completo:</label>
+            <input type="text" id="nome" name="nome" asp-for="NomeCompleto" />
+        </div>
+        <div class="cadastro">
+            <label for="data">Data de Nascimento:</label>
+            <input type="datetime-local" id="data" name="data" asp-for="DataNascimento" />
+        </div>
+        <div class="cadastro">
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco" asp-for="Endereco" />
+        </div>
+        <div class="cadastro">
+            <label for="telefone">Telefone:</label>
+            <input type="text" id="telefone" name="telefone" asp-for="Telefone" />
+        </div>
+        <div class="cadastro">
+            <label for="email">Email para Contato:</label>
+            <input type="email" id="email" name="email" asp-for="Email" />
+        </div>
+        <div class="cadastro">
+            <label for="dataA">Data de Adesão:</label>
+            <input type="datetime-local" id="dataA" name="dataA" asp-for="DataAdesao" readonly />
+        </div>
+        <div class="cadastro">
+            <label for="emailU">Email ou CPF para Login:</label>
+            <input type="text" id="emailU" name="emailU" asp-for="Usuario" />
+        </div>
+        <div class="cadastro">
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" asp-for="Senha" />
+        </div>
+        <button type="submit">Ser Invicta</button>
+    </form>
+    <script>
+        function preencherInputDataHoraBrasilia() {
+            // Obter a data e hora atual em UTC
+            const dataAtualUTC = new Date();
 
-        <section>
-            <h2>Seção 2</h2>
-            <p>Conteúdo da seção 2.</p>
-        </section>
+            // Ajustar para o fuso horário de Brasília (UTC-3)
+            const dataHoraBrasilia = new Date(dataAtualUTC.getTime() - (3 * 60 * 60 * 1000));
 
-        <!-- Adicione mais seções conforme necessário -->
+            // Formatando a data e hora para o formato do input datetime-local
+            const dataHoraFormatada = dataHoraBrasilia.toISOString().slice(0, 16);
 
-    </main>
+            // Preencher o input com a data e hora formatadas
+            document.getElementById('dataA').value = dataHoraFormatada;
+        }
 
-    <footer>
-        <p>Rodapé da minha página.</p>
-    </footer>
+        // Chamar a função ao carregar a página
+        preencherInputDataHoraBrasilia();
+    </script>
 
 </body>
 
