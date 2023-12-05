@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Redefinição de Senha</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            width: 300px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+
+        input {
+            padding: 8px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            width: 195px;
+            border: none;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background-color: #45a049;  
+            }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form id="resetForm">
+            <h2>Redefinir Senha</h2>
+            <div class="form-group">
+                <label for="newPassword">Nova Senha:</label>
+                <input type="password" id="newPassword" name="newPassword" required>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirmar Senha:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            </div>
+            <button type="button" onclick="resetPassword()">Redefinir</button>
+        </form>
+        <div id="successMessage"></div>
+    </div>
+    <script>
+                function resetPassword() {
+            var newPassword = document.getElementById('newPassword').value;
+            var confirmPassword = document.getElementById('confirmPassword').value;
+            var successMessage = document.getElementById('successMessage');
+
+            if (newPassword === confirmPassword) {
+               
+                successMessage.innerHTML = 'Senha redefinida com sucesso!';
+                successMessage.style.color = 'green';
+            } else {
+                successMessage.innerHTML = 'As senhas não coincidem. Tente novamente.';
+                successMessage.style.color = 'red';
+            }
+        }
+
+    </script>
+</body>
+</html>
