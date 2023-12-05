@@ -17,35 +17,71 @@
             height: auto;
         }
 
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: silver;
+        }
+        body{
+            background-color:silver;
+
+        }
+
     </style>
 </head>
 <body>
   <from>
-      <div>
-            <img src="https://img.freepik.com/vetores-gratis/bola-de-futebol-na-net-pictograma_1284-11698.jpg?w=740&t=st=1701388615~exp=1701389215~hmac=29ab9c7c8e83ea9e1900012ac808a05e288a287c011465d9e5238369d06d3660" />
-            <label><b>Futebol</b></label>
-            <label><b>22/04</b></label>
-            <input type="checkbox" />
-            <label><b>Participar</b></label>
-      </div>
-      <div>
-            <img src="https://thumbs.dreamstime.com/z/v%C3%B4lei-e-bola-sobre-areia-no-fundo-do-ver%C3%A3o-jogos-de-lazer-ao-ar-livre-ilustra%C3%A7%C3%A3o-vetor-visualiza%C3%A7%C3%A3o-exerc%C3%ADcio-estilo-vida-247423214.jpg?w=992" />
-            <label><b>Voleibol</b></label>
-            <label><b>30/04</b></label>
-            <input type="checkbox" />
-            <label><b>Participar</b></label>
-      </div>
-      <div>
-            <img src="https://st4.depositphotos.com/9058402/29044/v/1600/depositphotos_290443318-stock-illustration-basketball-ball-falling-into-ring.jpg" />
-            <label><b>Basquete</b></label>
-            <label><b>02/05</b></label>
-            <input type="checkbox" />
-            <label><b>Participar</b></label>   
-      </div>
-      <div>
-            <input type="submit" value="Enviar" />
-      </div>
-      
+        <table>
+            <thead>
+                <tr>
+                    <th>Eventos</th>
+                    <th>Dia do mes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img src="https://img.freepik.com/vetores-gratis/bola-de-futebol-na-net-pictograma_1284-11698.jpg?w=740&t=st=1701388615~exp=1701389215~hmac=29ab9c7c8e83ea9e1900012ac808a05e288a287c011465d9e5238369d06d3660" /> <label><b>Futebol</b></label></td>
+                    <td>
+                        <label><b>22/04</b></label>
+                        <label><b>Participar</b></label>
+                        <input type="checkbox" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="https://thumbs.dreamstime.com/z/v%C3%B4lei-e-bola-sobre-areia-no-fundo-do-ver%C3%A3o-jogos-de-lazer-ao-ar-livre-ilustra%C3%A7%C3%A3o-vetor-visualiza%C3%A7%C3%A3o-exerc%C3%ADcio-estilo-vida-247423214.jpg?w=992" />
+                        <label><b>Voleibol</b></label>
+                    </td>
+                    <td>
+                        <label><b>30/04</b></label>
+                        <label><b>Participar</b></label>
+                        <input type="checkbox" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="https://st4.depositphotos.com/9058402/29044/v/1600/depositphotos_290443318-stock-illustration-basketball-ball-falling-into-ring.jpg" />
+                        <label><b>Basquete</b></label>
+                    </td>
+                    <td>
+                        <label><b>02/05</b></label>
+                        <label><b>Participar</b></label>
+                        <input type="checkbox" />
+                    </td>
+                </tr>
+                <!-- Adicione mais linhas conforme necessário -->
+            </tbody>
+        </table>
   </from>
 </body>
 </html>
