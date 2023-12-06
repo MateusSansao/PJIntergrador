@@ -1,9 +1,6 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    Layout = "_LayoutDependente";
 }
-
 <!DOCTYPE html>
 
 <html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
@@ -12,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <style>
-        img{
+        img {
             width: 12%;
             height: auto;
         }
@@ -20,7 +17,7 @@
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 10px;
+            margin-top: 20px;
         }
 
         th, td {
@@ -32,23 +29,18 @@
         th {
             background-color: silver;
         }
-        body{
-            background-color:silver;
 
-        }
-        body{
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+        body {
             background-color: silver;
-            background-image: url('https://img.freepik.com/vetores-premium/fundo-de-futebol-ou-futebol-com-bola-grande-em-cores-cinza_444390-4326.jpg?w=996');
+        }
+
+        body {
             text-align: center;
         }
-
     </style>
 </head>
 <body>
-  <from>
+    <from>
         <table>
             <thead>
                 <tr>
@@ -86,14 +78,14 @@
                         <label><b>Participar</b></label>
                         <input type="checkbox" />
                     </td>
-                </tr>        
+                </tr>
             </tbody>
         </table>
         <div>
             <button id="Botao">Confirmar</button>
         </div>
         <script>
-            function Alerta() {     
+            function Alerta() {
                 alert('Escolha feita com sucesso!');
             }
 
@@ -102,7 +94,6 @@
                 meuBotao.addEventListener('click', Alerta);
             });
         </script>
-        
-  </from>
+    </from>
 </body>
 </html>
