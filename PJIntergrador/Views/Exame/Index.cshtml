@@ -3,7 +3,6 @@
     ViewData["Title"] = "Home Page";
 }
 <!DOCTYPE html>
-@model List<Socios>
 <html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
@@ -37,23 +36,18 @@
     <table>
         <thead>
             <tr>
-                <th scope="col">NomeCompleto</th>
-                <th scope="col">Email</th>
+                <th >TipoExame</th>
+                <th >DataExame</th>
 
             </tr>
         </thead>
         <tbody>
-            @if (Model != null && Model.Any())
-            {
-                foreach (Socios socios in Model)
-                {
+
                     <tr>
-                        <td> @socios.NomeCompleto</td>
-                        <td> @socios.Email</td>
+                        <td>Prostota</td>
+                        <td>22/02/23</td>
                     </tr>
 
-                }
-            }
         </tbody>
     </table>
     <img src="https://img.freepik.com/vetores-gratis/ilustracao-desenhada-a-mao-dos-desenhos-animados-do-medico_23-2150696179.jpg" />
