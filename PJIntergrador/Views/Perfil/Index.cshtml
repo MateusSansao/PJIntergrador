@@ -11,6 +11,13 @@
     <title></title>
     <style>
         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url('https://img.freepik.com/fotos-premium/um-fundo-colorido-com-um-padrao-de-arco-iris_608068-12832.jpg');
         }
             
 
@@ -25,9 +32,6 @@
             left: 800px;
         }
 
-        table, th, td {
-            border: 1px solid black;
-        }
     </style>
 
 </head>
@@ -35,7 +39,7 @@
     <div>
         <h1>Exames</h1>
     </div>
-    <table>
+    <table class="table">
         <thead>
             <tr>
                 <th scope="col">NomeCompleto</th>
@@ -57,7 +61,26 @@
             }
         </tbody>
     </table>
-    <img src="https://a.storyblok.com/f/191576/1200x800/215e59568f/round_profil_picture_after_.webp" />
+
+    <br />
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>NomeDependentes</th>
+                <th>Parentesco</th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td>Ana Beatriz</td>
+                <td>Filha</td>
+            </tr>
+
+        </tbody>
+    </table>
 
 </body>
 </html>

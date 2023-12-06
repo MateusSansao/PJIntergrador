@@ -10,7 +10,13 @@
     <title></title>
     <style>
         body {
-            background-color: silver;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url('https://static.vecteezy.com/ti/vetor-gratis/p3/109588-plano-de-fundo-do-medico-vetor.jpg');
         }
 
         h1 {
@@ -22,10 +28,6 @@
             background-repeat: no-repeat;
         }
 
-        table, th, td {
-            border: 1px solid black;
-            width: 60%;
-        }
     </style>
 
 </head>
@@ -33,11 +35,11 @@
     <div>
         <h1>Exames</h1>
     </div>
-    <table>
+    <table class ="table">
         <thead>
             <tr>
-                <th >TipoExame</th>
-                <th >DataExame</th>
+                <th scope="col">TipoExame</th>
+                <th scope="col">DataExame</th>
 
             </tr>
         </thead>
