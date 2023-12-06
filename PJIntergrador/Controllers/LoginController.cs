@@ -45,6 +45,14 @@ namespace PJIntergrador.Controllers
             }
             return View("Index");
         }
+        public IActionResult Experiencia()
+        {
+            return View();
+        }
+        public IActionResult SobreNos()
+        {
+            return View();
+        }
 
     }
 }
