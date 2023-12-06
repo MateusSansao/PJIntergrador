@@ -1,5 +1,106 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: silver;
+            background-image: url('https://img.freepik.com/vetores-premium/fundo-de-futebol-ou-futebol-com-bola-grande-em-cores-cinza_444390-4326.jpg?w=996');
+            text-align: center;
+        }
+
+        .fatura {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            width: 80%;
+            margin: 0 auto;
+            background-color: #f9f9f9;
+        }
+
+        .cliente-info {
+            margin-bottom: 20px;
+        }
+
+        .itens-fatura {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+            .itens-fatura th, .itens-fatura td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: left;
+            }
+
+            .itens-fatura th {
+                background-color: #f2f2f2;
+            }
+
+        .total {
+            font-weight: bold;
+            font-size: 18px;
+        }
+        button{
+            position: absolute;
+            left: 50%;
+            transform: translate(-70%, -0%);
+        }
+    </style>
+    <title>Tela de Faturas</title>
+</head>
+<body>
+
+    <div class="fatura">
+        <h2>Fatura</h2>
+        <div class="cliente-info">
+            <p><strong>Cliente:</strong>Carlos</p>
+            <p><strong>Endereço:</strong>Limeira</p>
+            <p><strong>Data:</strong>31/01/2023</p>
+        </div>
+
+        <table class="itens-fatura">
+            <thead>
+                <tr>
+                    <th>Itens</th>
+                    <th>Descrição</th>
+                    <th>Quantidade</th>
+                    <th>Preço Unitário</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Voleibol</td>
+                    <td>1</td>
+                    <td>R$ 100,00</td>
+                    <td>R$ 100,00</td>
+                </tr>            
+            </tbody>
+        </table>
+        <p class="total">Total: R$ 100,00</p>
+    </div>
+    <div>
+        <a href="PixController1" <button id="Botao">Pagar</button></a>
+        
+    </div>
+    <script>
+        function Alerta() {
+            alert('QRcode vai ser gerado');
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var meuBotao = document.getElementById('Botao');
+            meuBotao.addEventListener('click', Alerta);
+        });
+    </script>
+</body>
+</html>
